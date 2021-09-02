@@ -1,0 +1,25 @@
+namespace: demo-namespace
+env: test
+owner: prashant
+configmap:
+  account: jd98257.canada-central.azure
+  user: prashant887
+  warehouse: COMPUTE_WH
+  database: DEMO_DB
+  schema: PUBLIC
+  role: ACCOUNTADMIN
+secret:
+  password: cHJhc2hhbnRMQDg4Nwo=
+volume:
+  storageclassname: hostpath
+  path: /Users/pl465j/projects/KubeHelmFlaskApi/log
+  storage: 10Mi
+  accessmode: ReadWriteOnce
+ports:
+  containerport: 8080
+  protocol: TCP
+  port: 8080
+image:
+  name: flasksfapi
+services:
+  type: LoadBalancer

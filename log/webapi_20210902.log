@@ -1,0 +1,74 @@
+2021-09-02 11:10:46,638  | INFO | DbConnector object is created
+2021-09-02 11:10:53,816  | INFO | DbConnector execute_sql method is called
+2021-09-02 11:11:03,647  | INFO | DbConnector close_connection method is called
+2021-09-02 11:11:04,422  | INFO | DbConnector connection is closed successfully
+2021-09-02 12:41:34,294  | INFO | Calling Home Route
+2021-09-02 12:41:51,226  | INFO | Calling Get getCustTab
+2021-09-02 12:41:51,228  | INFO | DbConnector object is created
+2021-09-02 12:41:59,760  | INFO | DbConnector execute_sql method is called
+2021-09-02 12:42:30,637  | INFO | DbConnector close_connection method is called
+2021-09-02 12:42:31,728  | INFO | DbConnector connection is closed successfully
+2021-09-02 12:43:11,612  | INFO | Calling Get getProdTab
+2021-09-02 12:43:11,618  | INFO | DbConnector object is created
+2021-09-02 12:43:20,948  | INFO | DbConnector execute_sql method is called
+2021-09-02 12:43:32,125  | INFO | DbConnector close_connection method is called
+2021-09-02 12:43:33,661  | INFO | DbConnector connection is closed successfully
+2021-09-02 13:55:02,149  | INFO | Calling Get getProdTab
+2021-09-02 13:55:02,151  | INFO | DbConnector object is created
+2021-09-02 13:55:08,022  | INFO | DbConnector execute_sql method is called
+2021-09-02 13:55:08,895  | INFO | Calling Get getProdTab
+2021-09-02 13:55:08,897  | INFO | DbConnector object is created
+2021-09-02 13:55:10,594  | INFO | DbConnector execute_sql method is called
+2021-09-02 13:55:11,815  | ERROR | 6 columns passed, passed data had 5 columns
+2021-09-02 13:55:11,817  | INFO | DbConnector close_connection method is called
+2021-09-02 13:55:12,636  | INFO | DbConnector connection is closed successfully
+2021-09-02 13:55:13,208  | ERROR | 6 columns passed, passed data had 5 columns
+2021-09-02 13:55:13,210  | INFO | DbConnector close_connection method is called
+2021-09-02 13:55:13,993  | INFO | DbConnector connection is closed successfully
+2021-09-02 14:00:17,706  | INFO | Calling Get getProdTab
+2021-09-02 14:00:17,707  | INFO | DbConnector object is created
+2021-09-02 14:00:23,796  | INFO | DbConnector execute_sql method is called
+2021-09-02 14:00:28,288  | INFO | DbConnector close_connection method is called
+2021-09-02 14:00:29,165  | INFO | DbConnector connection is closed successfully
+2021-09-02 14:07:30,037  | INFO | Calling Get getCustTab
+2021-09-02 14:07:30,038  | INFO | DbConnector object is created
+2021-09-02 14:07:31,898  | INFO | DbConnector execute_sql method is called
+2021-09-02 14:07:42,013  | INFO | DbConnector close_connection method is called
+2021-09-02 14:07:42,827  | INFO | DbConnector connection is closed successfully
+2021-09-02 14:26:53,253  | INFO | Calling Get getCustTab
+2021-09-02 14:26:53,259  | INFO | DbConnector object is created
+2021-09-02 14:26:58,564  | INFO | DbConnector execute_sql method is called
+2021-09-02 14:27:09,614  | INFO | DbConnector close_connection method is called
+2021-09-02 14:27:10,392  | INFO | DbConnector connection is closed successfully
+2021-09-02 14:30:57,739  | INFO | Calling Get getCustTab
+2021-09-02 14:30:57,744  | INFO | DbConnector object is created
+2021-09-02 14:31:00,109  | INFO | DbConnector execute_sql method is called
+2021-09-02 14:31:09,259  | INFO | DbConnector close_connection method is called
+2021-09-02 14:31:10,101  | INFO | DbConnector connection is closed successfully
+2021-09-02 15:08:50,592  | INFO | Calling Get getCustTab
+2021-09-02 15:08:50,599  | INFO | DbConnector object is created
+2021-09-02 15:08:54,163  | INFO | Calling Get getCustTab
+2021-09-02 15:08:54,165  | INFO | DbConnector object is created
+2021-09-02 15:08:54,691  | INFO | Calling Get getCustTab
+2021-09-02 15:08:54,695  | INFO | DbConnector object is created
+2021-09-02 15:08:54,920  | INFO | Calling Get getCustTab
+2021-09-02 15:08:54,921  | INFO | DbConnector object is created
+2021-09-02 15:09:02,163  | INFO | DbConnector execute_sql method is called
+2021-09-02 15:09:02,665  | INFO | DbConnector execute_sql method is called
+2021-09-02 15:09:03,381  | INFO | DbConnector execute_sql method is called
+2021-09-02 15:09:03,625  | INFO | DbConnector execute_sql method is called
+2021-09-02 15:09:34,965  | INFO | Calling Get getCustTab
+2021-09-02 15:09:34,968  | INFO | DbConnector object is created
+2021-09-02 15:09:51,253  | INFO | DbConnector execute_sql method is called
+2021-09-02 15:10:27,568  | INFO | DbConnector close_connection method is called
+2021-09-02 15:10:29,707  | INFO | DbConnector connection is closed successfully
+2021-09-02 16:12:31,210  | INFO | Calling Get getCustTab
+2021-09-02 16:12:31,212  | INFO | DbConnector object is created
+2021-09-02 16:12:36,829  | INFO | DbConnector execute_sql method is called
+2021-09-02 16:12:47,754  | INFO | DbConnector close_connection method is called
+2021-09-02 16:12:48,645  | INFO | DbConnector connection is closed successfully
+2021-09-02 16:19:58,276  | INFO | Calling Get getProdTab
+2021-09-02 16:19:58,286  | INFO | DbConnector object is created
+2021-09-02 16:20:05,651  | INFO | DbConnector execute_sql method is called
+2021-09-02 16:20:15,508  | INFO | DbConnector close_connection method is called
+2021-09-02 16:20:16,429  | INFO | DbConnector connection is closed successfully

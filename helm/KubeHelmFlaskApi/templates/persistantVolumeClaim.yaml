@@ -1,0 +1,19 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  annotations:
+    meta.helm.sh/release-name: {{ .Release.Name | quote }}
+    meta.helm.sh/release-namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: "Helm"
+  name: {{ .Release.Name }}-pvc
+  namespace: {{ .Values.namespace }}
+spec:
+  storageClassName: {{ .Values.volume.storageclassname }} #manual
+  accessModes:
+    - {{ .Values.volume.accessmode }}
+  resources:
+    requests:
+      storage: {{ .Values.volume.storage }}
+  volumeName: {{ .Release.Name }}-pv

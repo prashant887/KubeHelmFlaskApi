@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: {{ .Release.Name | quote }}
+    meta.helm.sh/release-namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: "Helm"
+  name: {{ .Release.Name }}-configmap
+  namespace: {{ .Values.namespace }}
+data:
+  account: {{ .Values.configmap.account }}
+  user: {{ .Values.configmap.user }}
+  warehouse: {{ .Values.configmap.warehouse }}
+  database: {{ .Values.configmap.database }}
+  schema: {{ .Values.configmap.schema }}
+  role: {{ .Values.configmap.role }}

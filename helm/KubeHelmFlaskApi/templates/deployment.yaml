@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    meta.helm.sh/release-name: {{ .Release.Name | quote }}
+    meta.helm.sh/release-namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: "Helm"
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      volumes:
+        - name: log-path
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-pvc
+      containers:
+      - name:  {{ .Values.image.name }}
+        image: {{ .Values.image.name }}:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: {{ .Values.ports.containerport }}
+        volumeMounts:
+          - name: log-path
+            mountPath: /log/
+        env:
+        - name: ENV
+          value:  {{ .Values.env }}
+        - name: USER
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-configmap
+              key: user
+        - name: PASSWD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Name }}-secret
+              key: password
+        - name: ACC
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-configmap
+              key: account
+        - name: WH
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-configmap
+              key: warehouse
+        - name: DB
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-configmap
+              key: database
+        - name: SCHEMA
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-configmap
+              key: schema
+        - name: ROLE
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-configmap
+              key: role

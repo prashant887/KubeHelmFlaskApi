@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.namespace }}
+  annotations:
+    meta.helm.sh/release-name: {{ .Release.Name | quote }}
+    meta.helm.sh/release-namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    env: {{ .Values.env }}
+    owner: {{ .Values.owner }}
+    app.kubernetes.io/managed-by: "Helm"
+spec:
+  selector:
+    app: {{ .Release.Name }}
+  ports:
+    - port: {{ .Values.ports.port }}
+      protocol: {{ .Values.ports.protocol }}
+      targetPort: {{ .Values.ports.containerport }}
+      name: http
+  type: {{ .Values.services.type }}

@@ -1,0 +1,20 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  annotations:
+    meta.helm.sh/release-name: {{ .Release.Name | quote }}
+    meta.helm.sh/release-namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: "Helm"
+    type: local
+  name: {{ .Release.Name }}-pv
+  namespace: {{ .Values.namespace }}
+spec:
+  storageClassName: {{ .Values.volume.storageclassname }} #manual
+  capacity:
+    storage: {{ .Values.volume.storage }}
+  accessModes:
+    - {{ .Values.volume.accessmode }}
+  hostPath:
+    path: {{ .Values.volume.path }}
